@@ -1,0 +1,71 @@
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage[round]{natbib}
+\usepackage[portuguese, english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{mathtools}
+
+\title{Construindo uma curva de juros de zero cupom: o modelo de Nelson e Siegel}
+\author{Nelson Seixas dos Santos\\Universidade Federal do Rio Grande do Sul\\Departamento de Economia e Relações Internacionais}
+\date{\today}
+
+
+
+
+
+
+\begin{document}
+\maketitle
+
+\section{O problema}
+
+\citet{nelsonsiegel1987}  se propõem a:
+
+\begin{quote} 
+The purpose of this paper is to introduce a simple, parsimonious model that is flexible enough to represent the range of shapes generally associated with yield curves: monotonic, humped, and S shaped. 
+\end{quote}
+
+
+\section{Importância do problema}
+
+O problema de encontrar um ajuste parsimonioso para a curva de juros que, ainda assim, mostre-se capaz de prever seus movimentos, antevendo assim a dinâmica da política monetária bem como permitindo o adequado apreçamento de ativos de renda fixa é enfatizado desde \citet{friedman1977}.
+
+Segundo os autores, outras aplicações importantes são:
+
+\begin{quote}
+demand functions (Friedman had in mind money demand), testing of  theories of the term structure of interest rates, and graphic display for informative purposes.
+\end{quote}
+
+\section{Método de solução}
+
+A solução proposta para o problema é dada pela solução de uma equação diferencial linear de segunda ordem com raízes características iguais a qual é dada pela expressão (\ref{solucao}):
+
+\begin{equation}\label{solucao}
+R(m) = \beta_0 + \left( \beta_1 + \beta_2 \right) .\left[ 1 - e^{\frac{-m}{\tau}}\right].\frac{m}{\tau} - \beta_2 . e^{\frac{-m}{\tau}}
+\end{equation}
+
+onde m é maturidade dos títulos, $\tau$ é uma constante e os parâmetros $\beta$'s são determinados pelas condições iniciais.
+
+Esta equação é linear nos coeficientes $\beta$ dado o valor de $\tau$ e converge para $\beta_0$ quando m vai para infinito e para $\beta_0 + \beta_1$ quando m tende a zero.
+
+\section{Resultados}
+\citet{nelsonsiegel1987}  afirmam que:
+
+\begin{quote}
+ We find that the model explains 96\% of the  variation in bill yields across maturities during the period 1981-83. The movement of the parameters through time reflects and confirms a change in Federal Reserve monetary policy in late 1982. 
+\end{quote}
+
+
+\section{Conclusão}
+Os autores concluem afirmando que:
+
+\begin{quote}
+The ability of the fitted curves to predict the price of the long-term Treasury bond with a correlation of .96 suggests that the model captures important attributes of the yield/maturity relation.
+\end{quote}
+
+
+\bibliographystyle{plainnat}
+\bibliography{nelson_siegel}
+
+
+\end{document}
